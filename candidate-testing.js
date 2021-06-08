@@ -46,20 +46,21 @@ for (let i = 0; i < questions.length; i++){
 //}
 */
 function gradeQuiz(candidateAnswers) {
- 
+ let numCorrect;
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
   let grade = 0; 
 for (let i=0; i < 5; i++){
     if (candidateAnswers[i].toLowerCase() == correctAnswers[i].toLowerCase()){
       // console.log(grade);
-      grade++
+    
+      numCorrect++
     }
   }
-
+grade = (numCorrect/questions.length) * 100;
 
 // grade / questions.length * 100
-console.log(`>>> Overall Grade: ${grade / questions.length * 100} (${grade} of ${questions.length} responses correct) <<<`);
-  if (grade/questions.length * 100 >= 80){
+console.log(`>>> Overall Grade: ${grade} (${numCorrect} of ${questions.length} responses correct) <<<`);
+  if (grade >= 80){
     console.log(">>> Status: PASSED <<<")
   } else {
     console.log(">>> Status: FAILED <<<")
