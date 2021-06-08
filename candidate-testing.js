@@ -58,7 +58,7 @@ for (let i=0; i < 5; i++){
 
 
 // grade / questions.length * 100
-console.log(`>>> Overall Grade: ${grade / questions.length * 100} (${grade} of 5 responses correct) <<<`);
+console.log(`>>> Overall Grade: ${grade / questions.length * 100} (${grade} of ${questions.length} responses correct) <<<`);
   if (grade/questions.length * 100 >= 80){
     console.log(">>> Status: PASSED <<<")
   } else {
@@ -68,24 +68,6 @@ console.log(`>>> Overall Grade: ${grade / questions.length * 100} (${grade} of 5
      
   return grade;
 }
-/*
-let numCorrect = 0;
-
-for(i = 0; i < candidateAnswers.length; i++) {
-  if (candidateAnswers[i] === correctAnswers[i] ){
-  numCorrect++
-  }
-  console.log(`${i+1}) ${questions[i]}`);
-  console.log(`Your Answer: ${candidateAnswers[i]}`);
-  console.log(`Correct Answer: ${correctAnswers[i]}`);
-  console.log("\n");
-
- // let grade;
- grade = (numCorrect / numQuestions) *  100
-//return grade;
-}
- */
-
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
